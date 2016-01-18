@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Nsb.Client.Models.Order
+
+<fieldset style="margin-top: 50px;">
+    <legend>Please review your order</legend>      
+    
+    <table style="width: 100%;">
+        <tr>
+            <td>@Html.LabelFor(m => m.Article)</td>   
+            <td>@Html.DisplayFor(m => m.Article)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Description)</td>
+            <td>@Html.DisplayFor(m => m.Description)</td>
+        </tr> 
+        <tr>
+            <td>@Html.LabelFor(m => m.Count)</td>
+            <td>@Html.DisplayFor(m => m.Count)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Price)</td>
+            <td>@Html.DisplayFor(m => m.Price)</td>
+        </tr> 
+        <tr>
+            <td colspan="2"><hr/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Confirm" onclick="location.href='@Url.Action("Confirm", "Home", Model)'" class="btn btn-primary" /></td>
+            <td></td>
+        </tr>
+    </table>
+</fieldset>
