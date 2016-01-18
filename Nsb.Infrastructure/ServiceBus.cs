@@ -17,6 +17,7 @@ namespace Nsb.Infrastructure
                 config.UsePersistence<InMemoryPersistence>();
                 config.UseTransport<MsmqTransport>();
                 config.EndpointName(endpointName);
+                config.Conventions().DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("Nsb") && t.Name.EndsWith("Command"));
                 config.PurgeOnStartup(true);
                 config.EnableInstallers();
                 Bus = NServiceBus.Bus.Create(config).Start();

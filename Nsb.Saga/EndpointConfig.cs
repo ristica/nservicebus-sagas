@@ -12,6 +12,7 @@ namespace Nsb.Saga
             if (Environment.UserInteractive)
                 Console.Title = "Saga";
 
+            configuration.Conventions().DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("Nsb") && t.Name.EndsWith("Command"));
             configuration.UsePersistence<InMemoryPersistence>();
         }
     }

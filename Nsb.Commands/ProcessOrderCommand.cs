@@ -1,9 +1,8 @@
 ﻿using System;
-using NServiceBus;
 
 namespace Nsb.Commands
 {
-    public class ProcessOrderCommand : ICommand
+    public class ProcessOrderCommand
     {
         public Guid OrderId { get; set; }
         public string Article { get; set; } 

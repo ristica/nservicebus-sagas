@@ -12,6 +12,7 @@ namespace Nsb.PriceCalc
             if (Environment.UserInteractive)
                 Console.Title = "Price Calculator";
 
+            configuration.Conventions().DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("Nsb") && t.Name.EndsWith("Command"));
             configuration.UsePersistence<InMemoryPersistence>();
         }
     }

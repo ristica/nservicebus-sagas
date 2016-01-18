@@ -1,10 +1,9 @@
 ﻿using System;
 using Nsb.Shared;
-using NServiceBus;
 
 namespace Nsb.Commands
 {
-    public class DispatchOrderCommand : ICommand
+    public class DispatchOrderCommand
     {
         public Guid OrderId { get; set; }
         public string Address { get; set; }
