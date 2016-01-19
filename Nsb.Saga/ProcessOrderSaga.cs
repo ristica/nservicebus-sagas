@@ -35,7 +35,7 @@ namespace Nsb.Saga
                 new AcceptOrderCommand
                 {
                     OrderId = Data.OrderId,
-                    Status = OrderStatus.started
+                    Status = OrderStatus.Started
                 });
         }
 
@@ -45,7 +45,6 @@ namespace Nsb.Saga
             Console.WriteLine("4) Order {0} accepted!", Data.OrderId);
             Console.WriteLine("5) Saga: sending order {0} to Dispatcher...", Data.OrderId);
 
-            // if status is at forwarded then call dispatch buero
             switch (message.Status)
             {
                 case OrderStatus.Accepted:
@@ -73,7 +72,6 @@ namespace Nsb.Saga
             Console.WriteLine("8) Order {0} successfully dispatched!", Data.OrderId);
             Console.WriteLine("9) Saga: sending order {0} back to originator...", Data.OrderId);
 
-            // if status is at forwarded then call dispatch buero
             switch (message.Status)
             {
                 case OrderStatus.Dispatched:
@@ -83,6 +81,9 @@ namespace Nsb.Saga
                             OrderId = Data.OrderId,
                             Status = OrderStatus.Processed
                         });
+
+                    MarkAsComplete();
+                    Console.WriteLine("10) Saga with ID {0} successfully processed!", Data.OrderId);
                     break;
                 case OrderStatus.Failed:
                     // handle failed status here
@@ -93,9 +94,6 @@ namespace Nsb.Saga
                     // ...
                     break;
             }
-
-            MarkAsComplete();
-            Console.WriteLine("10) Saga with ID {0} successfully processed!", Data.OrderId);
         }
     }
 }

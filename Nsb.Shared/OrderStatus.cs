@@ -6,6 +6,6 @@
         Dispatched = 1,
         Processed = 2,
         Failed = 3,
-        started = 4
+        Started = 4
     }
 }
