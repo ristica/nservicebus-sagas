@@ -15,6 +15,8 @@ namespace Nsb.Saga
         protected override void ConfigureHowToFindSaga(SagaPropertyMapper<ProcessOrderSagaData> mapper)
         {
             mapper.ConfigureMapping<ProcessOrderCommand>(msg => msg.OrderId).ToSaga(s => s.OrderId);
+            mapper.ConfigureMapping<OrderPlannedMessage>(msg => msg.OrderId).ToSaga(s => s.OrderId);
+            mapper.ConfigureMapping<OrderDispatchedMessage>(msg => msg.OrderId).ToSaga(s => s.OrderId);
         }
 
         public void Handle(ProcessOrderCommand message)

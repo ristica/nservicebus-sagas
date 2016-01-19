@@ -14,10 +14,11 @@ namespace Nsb.PriceCalc
         }
 
         public void Handle(PriceRequest message)
-        {    
+        {
+            var total = Service.PriceCalculator.GetPrice(message);
+
             Console.WriteLine();
-            Console.WriteLine("Calculating total price...");
-            Console.WriteLine("{0} piece for {1} a piece", message.Count, message.Price);
+            Console.WriteLine("Calculating total price: EUR {0}", total);
 
             // wo do not need to configure anything to get this work
             // because we are using Bus.Reply here, the NServiceBus 
@@ -25,7 +26,7 @@ namespace Nsb.PriceCalc
             this._bus.Reply(
                 new PriceResponse
                 {
-                    Total = Service.PriceCalculator.GetPrice(message)
+                    Total = total
                 });
         }
     }

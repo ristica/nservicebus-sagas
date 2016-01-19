@@ -15058,3 +15058,219 @@ System.InvalidOperationException: No handlers could be found for message type: N
    at NServiceBus.Unicast.Transport.TransportReceiver.TryProcess(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 228
    at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Action() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 266
 2016-01-18 16:47:23.440 WARN  NServiceBus.Faults.Forwarder.FaultManager Message with '4838e2da-7a45-4497-be1d-a59101148b6f' id has failed FLR and will be handed over to SLR for retry attempt 3.
+2016-01-18 16:47:54.371 INFO  NServiceBus.Unicast.Transport.TransportReceiver Failed to process message
+System.InvalidOperationException: No handlers could be found for message type: Nsb.Messages.OrderProcessedMessage
+   at NServiceBus.LoadHandlersBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\LoadHandlersBehavior.cs:line 29
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingMessageMutatorsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ExecuteLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\ExecuteLogicalMessagesBehavior.cs:line 24
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.CallbackInvocationBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\CallbackInvocationBehavior.cs:line 22
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.DeserializeLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\DeserializeLogicalMessagesBehavior.cs:line 47
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingTransportMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingTransportMessageMutatorsBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.SubscriptionReceiverBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Subscriptions\MessageDrivenSubscriptions\SubscriptionReceiverBehavior.cs:line 31
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.UnitOfWorkBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 42
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ChildContainerBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\ChildContainerBehavior.cs:line 17
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Monitoring\ProcessingStatisticsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.AuditBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Audit\AuditBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.Invoke() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 52
+   at NServiceBus.Pipeline.PipelineExecutor.Execute[T](BehaviorChain`1 pipelineAction, T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 129
+   at NServiceBus.Pipeline.PipelineExecutor.InvokePipeline[TContext](IEnumerable`1 behaviors, TContext context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 85
+   at NServiceBus.Pipeline.PipelineExecutor.InvokeReceivePhysicalMessagePipeline() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 102
+   at NServiceBus.Unicast.UnicastBus.TransportMessageReceived(Object sender, TransportMessageReceivedEventArgs e) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\UnicastBus.cs:line 826
+   at NServiceBus.Unicast.Transport.TransportReceiver.OnTransportMessageReceived(TransportMessage msg) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 411
+   at NServiceBus.Unicast.Transport.TransportReceiver.ProcessMessage(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 344
+   at NServiceBus.Unicast.Transport.TransportReceiver.TryProcess(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 228
+   at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Action() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 266
+2016-01-18 16:47:54.377 INFO  NServiceBus.Unicast.Transport.TransportReceiver Failed to process message
+System.InvalidOperationException: No handlers could be found for message type: Nsb.Messages.OrderProcessedMessage
+   at NServiceBus.LoadHandlersBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\LoadHandlersBehavior.cs:line 29
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingMessageMutatorsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ExecuteLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\ExecuteLogicalMessagesBehavior.cs:line 24
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.CallbackInvocationBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\CallbackInvocationBehavior.cs:line 22
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.DeserializeLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\DeserializeLogicalMessagesBehavior.cs:line 47
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingTransportMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingTransportMessageMutatorsBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.SubscriptionReceiverBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Subscriptions\MessageDrivenSubscriptions\SubscriptionReceiverBehavior.cs:line 31
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.UnitOfWorkBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 42
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ChildContainerBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\ChildContainerBehavior.cs:line 17
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Monitoring\ProcessingStatisticsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.AuditBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Audit\AuditBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.Invoke() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 52
+   at NServiceBus.Pipeline.PipelineExecutor.Execute[T](BehaviorChain`1 pipelineAction, T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 129
+   at NServiceBus.Pipeline.PipelineExecutor.InvokePipeline[TContext](IEnumerable`1 behaviors, TContext context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 85
+   at NServiceBus.Pipeline.PipelineExecutor.InvokeReceivePhysicalMessagePipeline() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 102
+   at NServiceBus.Unicast.UnicastBus.TransportMessageReceived(Object sender, TransportMessageReceivedEventArgs e) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\UnicastBus.cs:line 826
+   at NServiceBus.Unicast.Transport.TransportReceiver.OnTransportMessageReceived(TransportMessage msg) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 411
+   at NServiceBus.Unicast.Transport.TransportReceiver.ProcessMessage(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 344
+   at NServiceBus.Unicast.Transport.TransportReceiver.TryProcess(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 228
+   at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Action() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 266
+2016-01-18 16:47:54.403 INFO  NServiceBus.Unicast.Transport.TransportReceiver Failed to process message
+System.InvalidOperationException: No handlers could be found for message type: Nsb.Messages.OrderProcessedMessage
+   at NServiceBus.LoadHandlersBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\LoadHandlersBehavior.cs:line 29
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingMessageMutatorsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ExecuteLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\ExecuteLogicalMessagesBehavior.cs:line 24
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.CallbackInvocationBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\CallbackInvocationBehavior.cs:line 22
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.DeserializeLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\DeserializeLogicalMessagesBehavior.cs:line 47
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingTransportMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingTransportMessageMutatorsBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.SubscriptionReceiverBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Subscriptions\MessageDrivenSubscriptions\SubscriptionReceiverBehavior.cs:line 31
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.UnitOfWorkBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 42
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ChildContainerBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\ChildContainerBehavior.cs:line 17
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Monitoring\ProcessingStatisticsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.AuditBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Audit\AuditBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.Invoke() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 52
+   at NServiceBus.Pipeline.PipelineExecutor.Execute[T](BehaviorChain`1 pipelineAction, T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 129
+   at NServiceBus.Pipeline.PipelineExecutor.InvokePipeline[TContext](IEnumerable`1 behaviors, TContext context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 85
+   at NServiceBus.Pipeline.PipelineExecutor.InvokeReceivePhysicalMessagePipeline() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 102
+   at NServiceBus.Unicast.UnicastBus.TransportMessageReceived(Object sender, TransportMessageReceivedEventArgs e) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\UnicastBus.cs:line 826
+   at NServiceBus.Unicast.Transport.TransportReceiver.OnTransportMessageReceived(TransportMessage msg) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 411
+   at NServiceBus.Unicast.Transport.TransportReceiver.ProcessMessage(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 344
+   at NServiceBus.Unicast.Transport.TransportReceiver.TryProcess(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 228
+   at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Action() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 266
+2016-01-18 16:47:54.409 INFO  NServiceBus.Unicast.Transport.TransportReceiver Failed to process message
+System.InvalidOperationException: No handlers could be found for message type: Nsb.Messages.OrderProcessedMessage
+   at NServiceBus.LoadHandlersBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\LoadHandlersBehavior.cs:line 29
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingMessageMutatorsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ExecuteLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\ExecuteLogicalMessagesBehavior.cs:line 24
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.CallbackInvocationBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\CallbackInvocationBehavior.cs:line 22
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.DeserializeLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\DeserializeLogicalMessagesBehavior.cs:line 47
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingTransportMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingTransportMessageMutatorsBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.SubscriptionReceiverBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Subscriptions\MessageDrivenSubscriptions\SubscriptionReceiverBehavior.cs:line 31
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.UnitOfWorkBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 42
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ChildContainerBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\ChildContainerBehavior.cs:line 17
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Monitoring\ProcessingStatisticsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.AuditBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Audit\AuditBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.Invoke() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 52
+   at NServiceBus.Pipeline.PipelineExecutor.Execute[T](BehaviorChain`1 pipelineAction, T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 129
+   at NServiceBus.Pipeline.PipelineExecutor.InvokePipeline[TContext](IEnumerable`1 behaviors, TContext context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 85
+   at NServiceBus.Pipeline.PipelineExecutor.InvokeReceivePhysicalMessagePipeline() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 102
+   at NServiceBus.Unicast.UnicastBus.TransportMessageReceived(Object sender, TransportMessageReceivedEventArgs e) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\UnicastBus.cs:line 826
+   at NServiceBus.Unicast.Transport.TransportReceiver.OnTransportMessageReceived(TransportMessage msg) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 411
+   at NServiceBus.Unicast.Transport.TransportReceiver.ProcessMessage(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 344
+   at NServiceBus.Unicast.Transport.TransportReceiver.TryProcess(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 228
+   at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Action() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 266
+2016-01-18 16:47:54.413 INFO  NServiceBus.Unicast.Transport.TransportReceiver Failed to process message
+System.InvalidOperationException: No handlers could be found for message type: Nsb.Messages.OrderProcessedMessage
+   at NServiceBus.LoadHandlersBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\LoadHandlersBehavior.cs:line 29
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingMessageMutatorsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ExecuteLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\ExecuteLogicalMessagesBehavior.cs:line 24
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.CallbackInvocationBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\CallbackInvocationBehavior.cs:line 22
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.DeserializeLogicalMessagesBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Messages\DeserializeLogicalMessagesBehavior.cs:line 47
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ApplyIncomingTransportMessageMutatorsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\MessageMutator\ApplyIncomingTransportMessageMutatorsBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.SubscriptionReceiverBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Subscriptions\MessageDrivenSubscriptions\SubscriptionReceiverBehavior.cs:line 31
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.UnitOfWorkBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 42
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ChildContainerBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Behaviors\ChildContainerBehavior.cs:line 17
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Monitoring\ProcessingStatisticsBehavior.cs:line 23
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.<>c__DisplayClass4_0.<InvokeNext>b__0() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 94
+   at NServiceBus.AuditBehavior.Invoke(IncomingContext context, Action next) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Audit\AuditBehavior.cs:line 20
+   at NServiceBus.BehaviorChain`1.InvokeNext(T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 107
+   at NServiceBus.BehaviorChain`1.Invoke() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\BehaviorChain.cs:line 52
+   at NServiceBus.Pipeline.PipelineExecutor.Execute[T](BehaviorChain`1 pipelineAction, T context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 129
+   at NServiceBus.Pipeline.PipelineExecutor.InvokePipeline[TContext](IEnumerable`1 behaviors, TContext context) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 85
+   at NServiceBus.Pipeline.PipelineExecutor.InvokeReceivePhysicalMessagePipeline() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Pipeline\PipelineExecutor.cs:line 102
+   at NServiceBus.Unicast.UnicastBus.TransportMessageReceived(Object sender, TransportMessageReceivedEventArgs e) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\UnicastBus.cs:line 826
+   at NServiceBus.Unicast.Transport.TransportReceiver.OnTransportMessageReceived(TransportMessage msg) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 411
+   at NServiceBus.Unicast.Transport.TransportReceiver.ProcessMessage(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 344
+   at NServiceBus.Unicast.Transport.TransportReceiver.TryProcess(TransportMessage message) in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 228
+   at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Action() in C:\BuildAgent\work\3206e2123f54fce4\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 266
+2016-01-18 16:47:54.418 ERROR NServiceBus.Faults.Forwarder.FaultManager SLR has failed to resolve the issue with message 4838e2da-7a45-4497-be1d-a59101148b6f and will be forwarded to the error queue at error@ATZWS135480

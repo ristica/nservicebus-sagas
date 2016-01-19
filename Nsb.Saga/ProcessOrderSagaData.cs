@@ -3,14 +3,18 @@ using NServiceBus.Saga;
 
 namespace Nsb.Saga
 {
-    public class ProcessOrderSagaData : ContainSagaData
+    public class ProcessOrderSagaData : IContainSagaData
     {
         [Unique]
-        public Guid OrderId { get; set; }
-        public string Article { get; set; }
-        public string Description { get; set; }
-        public int Count { get; set; }
-        public int Price { get; set; }
-        public string Address { get; set; }
+        public virtual Guid OrderId { get; set; }
+        public virtual string Article { get; set; }
+        public virtual string Description { get; set; }
+        public virtual int Count { get; set; }
+        public virtual int Price { get; set; }
+        public virtual string Address { get; set; }
+
+        public virtual Guid Id { get; set; }
+        public virtual string Originator { get; set; }
+        public virtual string OriginalMessageId { get; set; }
     }
 }
