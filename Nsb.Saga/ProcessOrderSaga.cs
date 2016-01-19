@@ -69,7 +69,7 @@ namespace Nsb.Saga
         public void Handle(OrderDispatchedMessage message)
         {
             Console.WriteLine();
-            Console.WriteLine("8) Order {0} successfully dispatched!", Data.OrderId);
+            Console.WriteLine("8) Order {0} dispatched!", Data.OrderId);
             Console.WriteLine("9) Saga: sending order {0} back to originator...", Data.OrderId);
 
             switch (message.Status)

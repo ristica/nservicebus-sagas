@@ -21,8 +21,7 @@ namespace Nsb.PriceCalc
             Console.WriteLine("Calculating total price: EUR {0}", total);
 
             // wo do not need to configure anything to get this work
-            // because we are using Bus.Reply here, the NServiceBus 
-            // knows how it has to handle the message forwarding back
+            // NServiceBus knows how to handle Bus.Reply forwarding back
             this._bus.Reply(
                 new PriceResponse
                 {
