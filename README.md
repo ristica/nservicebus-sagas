@@ -1,5 +1,4 @@
-# NServiceBus-Saga
-Microservices with NServiceBus and Sagas
+# Microservices with NServiceBus and Saga
 
 No need for any kind of database because everything happens in mmemory...
 
