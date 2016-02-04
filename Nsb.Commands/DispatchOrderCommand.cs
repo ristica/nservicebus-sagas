@@ -3,6 +3,9 @@ using Nsb.Shared;
 
 namespace Nsb.Commands
 {
+    /// <summary>
+    /// NOTE: no need for ICommand implementation
+    /// </summary>
     public class DispatchOrderCommand
     {
         public Guid OrderId { get; set; }

@@ -4,7 +4,7 @@ namespace Nsb.PriceCalc.Service
 {
     public static class PriceCalculator
     {
-        public static int GetPrice(PriceRequest request)
+        public static int GetPrice(PriceRequestMessage request)
         {
             if (request.Count < 3)
             {

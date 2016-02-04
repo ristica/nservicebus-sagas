@@ -21,13 +21,12 @@ namespace Nsb.Sales
             Console.WriteLine();
             Console.WriteLine("2) Order {0} accepted!", message.OrderId);
 
-            // no need for configuration because of Reply!
-            var response = new OrderPlannedMessage
-            {
-                OrderId = message.OrderId, 
-                Status = OrderStatus.Accepted
-            };
-            this._bus.Reply(response);
+            this._bus.Reply(
+                new OrderPlannedMessage
+                {
+                    OrderId = message.OrderId,
+                    Status = OrderStatus.Accepted
+                });
 
             Console.WriteLine();
             Console.WriteLine("3) Sending order {0} back to saga", message.OrderId);

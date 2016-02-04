@@ -2,6 +2,9 @@
 
 namespace Nsb.Commands
 {
+    /// <summary>
+    /// NOTE: no need for ICommand implementation
+    /// </summary>
     public class ProcessOrderCommand
     {
         public Guid OrderId { get; set; }

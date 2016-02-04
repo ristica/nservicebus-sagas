@@ -20,7 +20,6 @@ namespace Nsb.Dispatch
             Console.WriteLine();
             Console.WriteLine("6) Dispatching order {0} to address: {1}", message.OrderId, message.Address);
 
-            // no need for configuration because of Reply!
             this._bus.Reply(
                 new OrderDispatchedMessage
                 {

@@ -1,10 +1,9 @@
 ﻿using System;
 using Nsb.Shared;
-using NServiceBus;
 
 namespace Nsb.Messages
 {
-    public class OrderProcessedMessage : IMessage
+    public class OrderProcessedMessage
     {
         public Guid OrderId { get; set; }
         public OrderStatus Status { get; set; }

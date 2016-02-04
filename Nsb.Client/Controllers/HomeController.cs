@@ -20,7 +20,7 @@ namespace Nsb.Client.Controllers
         {
             // do Request / Response for total price
             var callback = ServiceBus.Bus.Send(
-                new PriceRequest
+                new PriceRequestMessage
                 {
                     Count = order.Count,
                     Price = order.Price
@@ -28,7 +28,7 @@ namespace Nsb.Client.Controllers
                 Register(result =>
                 {
                     var localResult = (CompletionResult) result.AsyncState;
-                    var reply = (PriceResponse) localResult.Messages[0];
+                    var reply = (PriceResponseMessage) localResult.Messages[0];
                     order.Price = reply.Total;
                 }, null);
             callback.AsyncWaitHandle.WaitOne();

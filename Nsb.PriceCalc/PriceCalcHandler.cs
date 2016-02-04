@@ -4,7 +4,7 @@ using NServiceBus;
 
 namespace Nsb.PriceCalc
 {
-    public class PriceCalcHandler : IHandleMessages<PriceRequest>
+    public class PriceCalcHandler : IHandleMessages<PriceRequestMessage>
     {
         private readonly IBus _bus;
 
@@ -13,17 +13,15 @@ namespace Nsb.PriceCalc
             this._bus = bus;
         }
 
-        public void Handle(PriceRequest message)
+        public void Handle(PriceRequestMessage message)
         {
             var total = Service.PriceCalculator.GetPrice(message);
 
             Console.WriteLine();
             Console.WriteLine("Calculating total price: EUR {0}", total);
 
-            // wo do not need to configure anything to get this work
-            // NServiceBus knows how to handle Bus.Reply forwarding back
             this._bus.Reply(
-                new PriceResponse
+                new PriceResponseMessage
                 {
                     Total = total
                 });

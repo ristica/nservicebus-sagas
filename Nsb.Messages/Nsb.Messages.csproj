@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NServiceBus.5.2.12\lib\net45\NServiceBus.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +42,9 @@
     <Compile Include="OrderDispatchedMessage.cs" />
     <Compile Include="OrderPlannedMessage.cs" />
     <Compile Include="OrderProcessedMessage.cs" />
-    <Compile Include="PriceRequest.cs" />
-    <Compile Include="PriceResponse.cs" />
+    <Compile Include="PriceRequestMessage.cs" />
+    <Compile Include="PriceResponseMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nsb.Shared\Nsb.Shared.csproj">
