@@ -1,6 +1,6 @@
 # Microservices with NServiceBus and Saga
 
-No need for any kind of database because everything happens in mmemory...
+No need for any kind of database because everything happens in memory...
 
 Just build the solution (restore all nuget packages) and set multiple starting projects:
 - Nsb.Client (website)
