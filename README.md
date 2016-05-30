@@ -10,4 +10,6 @@ Just build the solution (restore all nuget packages) and set multiple starting p
 - Nsb.Saga (coordinates the workflow)
 - Nsb.Sales (simulates some kind of a sales departemnt)
 
+IMPORTANT: MSMQ (under Windows features activate / deactivate) should be activated!
+
 That's it!
